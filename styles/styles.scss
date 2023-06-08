@@ -1,0 +1,995 @@
+// IMPORTS
+@import '../mediaq/mediaq.scss';
+
+@font-face {
+    font-family: pepe;
+    src: url(/boring-sans-a-trial.light.ttf);
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    transition: 0.5s;
+
+    .volver {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: 2px solid black;
+        position: fixed;
+        left: 1vw;
+        bottom: 2vh;
+        transition: 0.2s;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0.5;
+
+        @include tablet {
+            width: 35px;
+            height: 35px;
+        }
+
+        svg {
+            width: 70%;
+        }
+    }
+
+    .volver:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .prueba {
+        width: auto;
+        height: auto;
+        display: none;
+        transition: 0.5s;
+        background-color: white;
+
+        // MAIN
+        main {
+            width: 100%;
+            height: auto;
+
+            @include tablet {
+                height: auto;
+            }
+
+            // NAV NORMAL
+            nav {
+                width: 1000px;
+                height: 70px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @include tablet {
+                    width: 95%;
+                }
+
+                .nav-1 {
+                    h1 {
+                        text-transform: uppercase;
+                        font-family: pepe;
+                        font-size: 30px;
+                        margin-top: 10px;
+                        letter-spacing: 4px;
+                    }
+                }
+
+                .nav-2 {
+                    ul {
+                        display: flex;
+                        margin-top: 20px;
+                        gap: 25px;
+                        list-style: none;
+
+                        li a {
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: black;
+                            font-family: pepe;
+                            font-size: 18px;
+                            transition: 0.2s;
+                        }
+
+                        li a:hover {
+                            color: #dbbe7f;
+                        }
+                    }
+
+                    @include tablet {
+                        display: none;
+                    }
+                }
+
+                img {
+                    width: 40px;
+                    display: none;
+
+                    @include tablet {
+                        display: block;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            // NAV MOBILE
+            .navMobile {
+                width: 100%;
+                height: 100vh;
+                margin: auto;
+                background-color: rgb(255, 255, 255);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                @include tablet {
+                    width: 95%;
+                }
+
+                .nav-1 {
+                    display: none;
+
+                    h1 {
+                        text-transform: uppercase;
+                        font-family: pepe;
+                        font-size: 30px;
+                        margin-top: 10px;
+                        letter-spacing: 4px;
+                    }
+                }
+
+                .nav-2 {
+                    display: block;
+                    margin: auto;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 20px;
+                        gap: 25px;
+                        list-style: none;
+
+                        li a {
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: black;
+                            font-family: pepe;
+                            font-size: 18px;
+                            transition: 0.2s;
+                        }
+
+                        li a:hover {
+                            color: #dbbe7f;
+                        }
+                    }
+                }
+
+                img {
+                    width: 22px;
+                    position: absolute;
+                    right: 8vw;
+                    top: 2.5vh;
+                    display: block;
+                    cursor: pointer;
+
+
+                }
+            }
+
+            .carrusel {
+                width: 1000px;
+                margin: auto;
+                height: calc(100vh - 70px);
+
+                @include tablet {
+                    width: 95%;
+                    height: auto;
+                }
+
+                .slide img {
+                    height: calc(100vh - 70px);
+
+                    @include tablet {
+                        height: auto;
+                    }
+                }
+
+            }
+        }
+
+        // INTERIORS
+        .interiors {
+            width: 1000px;
+            height: auto;
+            margin: auto;
+
+            @include tablet {
+                width: 95%;
+            }
+
+            h2 {
+                font-family: pepe;
+                text-align: center;
+                padding: 30px;
+                letter-spacing: 2px;
+            }
+
+            .card-1 {
+                width: 100%;
+                height: 280px;
+                display: flex;
+                justify-content: space-between;
+                opacity: 0;
+                transition: opacity 3s ease;
+
+                @include tablet {
+                    flex-direction: column-reverse;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                }
+
+                .card-1-img-1 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets/INTERIORS/BOTANE/botane1.webp);
+                }
+
+                .card-1-img-2 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets//INTERIORS/BOTANE/botane2.webp);
+                }
+
+                .card-1-desc {
+                    width: 325px;
+                    height: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border: 1px solid rgb(201, 201, 201);
+
+                    @include tablet {
+                        width: 330px;
+                    }
+
+                    h3 {
+                        font-family: pepe;
+                        color: rgb(43, 42, 42);
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgb(32, 32, 32);
+                        font-family: pepe;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    button {
+                        width: 200px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        background-color: rgb(255, 255, 255);
+                        align-items: center;
+                        border: 1px solid rgb(165, 165, 165);
+                        color: black;
+                        gap: 4px;
+                        transition: 0.1s;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+
+                    button:hover {
+                        color: #dbbe7f;
+                        border: 1px solid #dbbe7f;
+
+                        img {
+                            src: url(/assets/folder1.png);
+                        }
+                    }
+                }
+
+            }
+
+            .card-2 {
+                width: 100%;
+                height: 280px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                opacity: 0;
+                transition: opacity 3s ease;
+
+                @include tablet {
+                    flex-direction: column;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 10px;
+                }
+
+                .card-2-img-1 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets/INTERIORS/CABRERAmonoambiente/mono1.webp);
+                }
+
+                .card-2-img-2 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets//INTERIORS/CABRERAmonoambiente/mono2.webp);
+                }
+
+                .card-2-desc {
+                    width: 325px;
+                    height: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border: 1px solid rgb(201, 201, 201);
+
+                    @include tablet {
+                        width: 330px;
+                    }
+
+                    h3 {
+                        font-family: pepe;
+                        color: rgb(43, 42, 42);
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgb(32, 32, 32);
+                        font-family: pepe;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    button {
+                        width: 200px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        background-color: rgb(255, 255, 255);
+                        align-items: center;
+                        border: 1px solid rgb(165, 165, 165);
+                        gap: 4px;
+                        transition: 0.1s;
+                        color: black;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+
+                    button:hover {
+                        color: #dbbe7f;
+                        border: 1px solid #dbbe7f;
+
+                        img {
+                            src: url(/assets/folder1.png);
+                        }
+                    }
+                }
+            }
+
+            .card-3 {
+                width: 100%;
+                height: 280px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                opacity: 0;
+                transition: opacity 3s ease;
+
+                @include tablet {
+                    flex-direction: column-reverse;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 10px;
+                }
+
+                .card-3-img-1 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets/INTERIORS/DIMMdarwin/darwin1.webp);
+                }
+
+                .card-3-img-2 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets//INTERIORS/DIMMdarwin/darwin2.webp);
+                }
+
+                .card-3-desc {
+                    width: 325px;
+                    height: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border: 1px solid rgb(201, 201, 201);
+
+                    @include tablet {
+                        width: 330px;
+                    }
+
+                    h3 {
+                        font-family: pepe;
+                        color: rgb(43, 42, 42);
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgb(32, 32, 32);
+                        font-family: pepe;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    button {
+                        width: 200px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        background-color: rgb(255, 255, 255);
+                        align-items: center;
+                        border: 1px solid rgb(165, 165, 165);
+                        gap: 4px;
+                        transition: 0.1s;
+                        color: black;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+
+                    button:hover {
+                        color: #dbbe7f;
+                        border: 1px solid #dbbe7f;
+
+                        img {
+                            src: url(/assets/folder1.png);
+                        }
+                    }
+                }
+            }
+
+            .card-4 {
+                width: 100%;
+                height: 280px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                opacity: 0;
+                transition: opacity 3s ease;
+
+                @include tablet {
+                    flex-direction: column;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 10px;
+                }
+
+                .card-4-img-1 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets/INTERIORS/DIMMgorriti/gorriti1.webp);
+                }
+
+                .card-4-img-2 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets//INTERIORS/DIMMgorriti/gorriti2.webp);
+                }
+
+                .card-4-desc {
+                    width: 325px;
+                    height: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border: 1px solid rgb(201, 201, 201);
+
+                    @include tablet {
+                        width: 330px;
+                    }
+
+                    h3 {
+                        font-family: pepe;
+                        color: rgb(43, 42, 42);
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgb(32, 32, 32);
+                        font-family: pepe;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    button {
+                        width: 200px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        background-color: rgb(255, 255, 255);
+                        align-items: center;
+                        border: 1px solid rgb(165, 165, 165);
+                        gap: 4px;
+                        transition: 0.1s;
+                        color: black;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+
+                    button:hover {
+                        color: #dbbe7f;
+                        border: 1px solid #dbbe7f;
+
+                        img {
+                            src: url(/assets/folder1.png);
+                        }
+                    }
+                }
+            }
+
+            .card-5 {
+                width: 100%;
+                height: 280px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                opacity: 0;
+                transition: opacity 3s ease;
+
+                @include tablet {
+                    flex-direction: column-reverse;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 10px;
+                }
+
+                .card-5-img-1 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets/INTERIORS/FE/fe1.webp);
+                }
+
+                .card-5-img-2 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets//INTERIORS/FE/fe2.webp);
+                }
+
+                .card-5-desc {
+                    width: 325px;
+                    height: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border: 1px solid rgb(201, 201, 201);
+
+                    @include tablet {
+                        width: 330px;
+                    }
+
+                    h3 {
+                        font-family: pepe;
+                        color: rgb(43, 42, 42);
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgb(32, 32, 32);
+                        font-family: pepe;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    button {
+                        width: 200px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        background-color: rgb(255, 255, 255);
+                        align-items: center;
+                        border: 1px solid rgb(165, 165, 165);
+                        gap: 4px;
+                        transition: 0.1s;
+                        color: black;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+
+                    button:hover {
+                        color: #dbbe7f;
+                        border: 1px solid #dbbe7f;
+
+                        img {
+                            src: url(/assets/folder1.png);
+                        }
+                    }
+                }
+            }
+
+            .card-6 {
+                width: 100%;
+                height: 280px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                opacity: 0;
+                transition: opacity 3s ease;
+
+                @include tablet {
+                    flex-direction: column;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                    margin-top: 10px;
+                }
+
+                .card-6-img-1 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets/INTERIORS/LACROZEterraza/terra1.webp);
+                }
+
+                .card-6-img-2 {
+                    width: 325px;
+                    height: 280px;
+                    background-image: url(/assets//INTERIORS/LACROZEterraza/terra2.webp);
+                }
+
+                .card-6-desc {
+                    width: 325px;
+                    height: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border: 1px solid rgb(201, 201, 201);
+
+                    @include tablet {
+                        width: 330px;
+                    }
+
+                    h3 {
+                        font-family: pepe;
+                        color: rgb(43, 42, 42);
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgb(32, 32, 32);
+                        font-family: pepe;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    button {
+                        width: 200px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        background-color: rgb(255, 255, 255);
+                        align-items: center;
+                        border: 1px solid rgb(165, 165, 165);
+                        gap: 4px;
+                        transition: 0.1s;
+                        color: black;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+
+                    button:hover {
+                        color: #dbbe7f;
+                        border: 1px solid #dbbe7f;
+
+                        img {
+                            src: url(/assets/folder1.png);
+                        }
+                    }
+                }
+            }
+        }
+
+        // SET-DESING
+        .set-desing {
+            width: 1000px;
+            height: auto;
+            margin: 30px auto;
+
+            @include tablet {
+                width: 95%;
+            }
+
+            h2 {
+                font-family: pepe;
+                text-align: center;
+                padding-bottom: 30px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            .set-1 {
+                width: 100%;
+                height: 350px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                opacity: 1;
+                transition: opacity 3s ease;
+
+                @include tablet {
+                    flex-direction: column;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                }
+
+                .set-1-img-1 {
+                    width: 250px;
+                    height: 280px;
+                    background-color: white;
+                    border: 1px solid black;
+
+                    @include mobile {
+                        width: 320px;
+                        height: 270px;
+                    }
+                }
+
+                .set-1-img-2 {
+                    width: 250px;
+                    height: 280px;
+                    background-color: white;
+                    border: 1px solid black;
+
+                    @include mobile {
+                        width: 320px;
+                        height: 270px;
+                    }
+                }
+
+                .set-1-carrousel {
+                    width: 400px;
+                    height: 350px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border: 1px solid rgb(201, 201, 201);
+
+                    @include tablet {
+                        width: 400px;
+                    }
+
+                    @include mobile {
+                        width: 320px;
+                        height: 270px;
+                    }
+
+                    h3 {
+                        font-family: pepe;
+                        color: rgb(43, 42, 42);
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgb(32, 32, 32);
+                        font-family: pepe;
+                    }
+
+                    .slide img {
+                        width: 400px;
+                        height: 350px;
+
+                        @include mobile {
+                            width: 320px;
+                            height: 270px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // STYLING 
+        .styling {
+            width: 1000px;
+            height: auto;
+            margin: 30px auto;
+
+            @include tablet {
+                width: 95%;
+            }
+
+            h2 {
+                font-family: pepe;
+                text-align: center;
+                padding-bottom: 30px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            .style-1 {
+                width: 100%;
+                height: 350px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                opacity: 1;
+                transition: opacity 3s ease;
+
+                @include tablet {
+                    flex-direction: column;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                }
+
+                .style-1-img-1 {
+                    width: 250px;
+                    height: 280px;
+                    background-color: white;
+                    border: 1px solid black;
+
+                    @include mobile {
+                        width: 320px;
+                        height: 270px;
+                    }
+                }
+
+                .style-1-img-2 {
+                    width: 250px;
+                    height: 280px;
+                    background-color: white;
+                    border: 1px solid black;
+
+                    @include mobile {
+                        width: 320px;
+                        height: 270px;
+                    }
+                }
+
+                .style-1-carrousel {
+                    width: 400px;
+                    height: 350px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border: 1px solid rgb(201, 201, 201);
+
+                    @include tablet {
+                        width: 400px;
+                    }
+
+                    @include mobile {
+                        width: 320px;
+                        height: 270px;
+                    }
+
+                    h3 {
+                        font-family: pepe;
+                        color: rgb(43, 42, 42);
+                    }
+
+                    p {
+                        width: 90%;
+                        color: rgb(32, 32, 32);
+                        font-family: pepe;
+                    }
+
+                    .slide img {
+                        width: 400px;
+                        height: 350px;
+
+                        @include mobile {
+                            width: 320px;
+                            height: 270px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // CONTACT 
+        .contact {
+            width: 1000px;
+            height: 280px;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+
+            @include tablet {
+                width: 95%;
+            }
+
+            h2 {
+                font-family: pepe;
+                text-align: center;
+                padding-top: 30px;
+                letter-spacing: 2px;
+            }
+
+            .contact-icons {
+                width: 250px;
+                height: 70px;
+                margin: 50px auto;
+                border: 1px solid rgb(7, 7, 7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                background-color: rgb(255, 255, 255);
+
+                svg {
+                    width: 50px;
+                    transition: 0.3s;
+                }
+
+                svg:hover {
+                    width: 55px;
+                    cursor: pointer;
+                }
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

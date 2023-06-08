@@ -1,0 +1,1045 @@
+@font-face {
+  font-family: pepe;
+  src: url(/boring-sans-a-trial.light.ttf);
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  transition: 0.5s;
+}
+html .volver,
+body .volver {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid black;
+  position: fixed;
+  left: 1vw;
+  bottom: 2vh;
+  transition: 0.2s;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0.5;
+}
+@media screen and (max-width: 1050px) {
+  html .volver,
+  body .volver {
+    width: 35px;
+    height: 35px;
+  }
+}
+html .volver svg,
+body .volver svg {
+  width: 70%;
+}
+html .volver:hover,
+body .volver:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+html .prueba,
+body .prueba {
+  width: auto;
+  height: auto;
+  display: none;
+  transition: 0.5s;
+  background-color: white;
+}
+html .prueba main,
+body .prueba main {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba main,
+  body .prueba main {
+    height: auto;
+  }
+}
+html .prueba main nav,
+body .prueba main nav {
+  width: 1000px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba main nav,
+  body .prueba main nav {
+    width: 95%;
+  }
+}
+html .prueba main nav .nav-1 h1,
+body .prueba main nav .nav-1 h1 {
+  text-transform: uppercase;
+  font-family: pepe;
+  font-size: 30px;
+  margin-top: 10px;
+  letter-spacing: 4px;
+}
+html .prueba main nav .nav-2 ul,
+body .prueba main nav .nav-2 ul {
+  display: flex;
+  margin-top: 20px;
+  gap: 25px;
+  list-style: none;
+}
+html .prueba main nav .nav-2 ul li a,
+body .prueba main nav .nav-2 ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-family: pepe;
+  font-size: 18px;
+  transition: 0.2s;
+}
+html .prueba main nav .nav-2 ul li a:hover,
+body .prueba main nav .nav-2 ul li a:hover {
+  color: #dbbe7f;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba main nav .nav-2,
+  body .prueba main nav .nav-2 {
+    display: none;
+  }
+}
+html .prueba main nav img,
+body .prueba main nav img {
+  width: 40px;
+  display: none;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba main nav img,
+  body .prueba main nav img {
+    display: block;
+    cursor: pointer;
+  }
+}
+html .prueba main .navMobile,
+body .prueba main .navMobile {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba main .navMobile,
+  body .prueba main .navMobile {
+    width: 95%;
+  }
+}
+html .prueba main .navMobile .nav-1,
+body .prueba main .navMobile .nav-1 {
+  display: none;
+}
+html .prueba main .navMobile .nav-1 h1,
+body .prueba main .navMobile .nav-1 h1 {
+  text-transform: uppercase;
+  font-family: pepe;
+  font-size: 30px;
+  margin-top: 10px;
+  letter-spacing: 4px;
+}
+html .prueba main .navMobile .nav-2,
+body .prueba main .navMobile .nav-2 {
+  display: block;
+  margin: auto;
+}
+html .prueba main .navMobile .nav-2 ul,
+body .prueba main .navMobile .nav-2 ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 25px;
+  list-style: none;
+}
+html .prueba main .navMobile .nav-2 ul li a,
+body .prueba main .navMobile .nav-2 ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-family: pepe;
+  font-size: 18px;
+  transition: 0.2s;
+}
+html .prueba main .navMobile .nav-2 ul li a:hover,
+body .prueba main .navMobile .nav-2 ul li a:hover {
+  color: #dbbe7f;
+}
+html .prueba main .navMobile img,
+body .prueba main .navMobile img {
+  width: 22px;
+  position: absolute;
+  right: 8vw;
+  top: 2.5vh;
+  display: block;
+  cursor: pointer;
+}
+html .prueba main .carrusel,
+body .prueba main .carrusel {
+  width: 1000px;
+  margin: auto;
+  height: calc(100vh - 70px);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba main .carrusel,
+  body .prueba main .carrusel {
+    width: 95%;
+    height: auto;
+  }
+}
+html .prueba main .carrusel .slide img,
+body .prueba main .carrusel .slide img {
+  height: calc(100vh - 70px);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba main .carrusel .slide img,
+  body .prueba main .carrusel .slide img {
+    height: auto;
+  }
+}
+html .prueba .interiors,
+body .prueba .interiors {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors,
+  body .prueba .interiors {
+    width: 95%;
+  }
+}
+html .prueba .interiors h2,
+body .prueba .interiors h2 {
+  font-family: pepe;
+  text-align: center;
+  padding: 30px;
+  letter-spacing: 2px;
+}
+html .prueba .interiors .card-1,
+body .prueba .interiors .card-1 {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-1,
+  body .prueba .interiors .card-1 {
+    flex-direction: column-reverse;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+}
+html .prueba .interiors .card-1 .card-1-img-1,
+body .prueba .interiors .card-1 .card-1-img-1 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets/INTERIORS/BOTANE/botane1.webp);
+}
+html .prueba .interiors .card-1 .card-1-img-2,
+body .prueba .interiors .card-1 .card-1-img-2 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets//INTERIORS/BOTANE/botane2.webp);
+}
+html .prueba .interiors .card-1 .card-1-desc,
+body .prueba .interiors .card-1 .card-1-desc {
+  width: 325px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(201, 201, 201);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-1 .card-1-desc,
+  body .prueba .interiors .card-1 .card-1-desc {
+    width: 330px;
+  }
+}
+html .prueba .interiors .card-1 .card-1-desc h3,
+body .prueba .interiors .card-1 .card-1-desc h3 {
+  font-family: pepe;
+  color: rgb(43, 42, 42);
+}
+html .prueba .interiors .card-1 .card-1-desc p,
+body .prueba .interiors .card-1 .card-1-desc p {
+  width: 90%;
+  color: rgb(32, 32, 32);
+  font-family: pepe;
+}
+html .prueba .interiors .card-1 .card-1-desc a,
+body .prueba .interiors .card-1 .card-1-desc a {
+  text-decoration: none;
+  color: black;
+}
+html .prueba .interiors .card-1 .card-1-desc button,
+body .prueba .interiors .card-1 .card-1-desc button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  border: 1px solid rgb(165, 165, 165);
+  color: black;
+  gap: 4px;
+  transition: 0.1s;
+}
+html .prueba .interiors .card-1 .card-1-desc button img,
+body .prueba .interiors .card-1 .card-1-desc button img {
+  width: 25px;
+}
+html .prueba .interiors .card-1 .card-1-desc button:hover,
+body .prueba .interiors .card-1 .card-1-desc button:hover {
+  color: #dbbe7f;
+  border: 1px solid #dbbe7f;
+}
+html .prueba .interiors .card-1 .card-1-desc button:hover img,
+body .prueba .interiors .card-1 .card-1-desc button:hover img {
+  src: url(/assets/folder1.png);
+}
+html .prueba .interiors .card-2,
+body .prueba .interiors .card-2 {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-2,
+  body .prueba .interiors .card-2 {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+html .prueba .interiors .card-2 .card-2-img-1,
+body .prueba .interiors .card-2 .card-2-img-1 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets/INTERIORS/CABRERAmonoambiente/mono1.webp);
+}
+html .prueba .interiors .card-2 .card-2-img-2,
+body .prueba .interiors .card-2 .card-2-img-2 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets//INTERIORS/CABRERAmonoambiente/mono2.webp);
+}
+html .prueba .interiors .card-2 .card-2-desc,
+body .prueba .interiors .card-2 .card-2-desc {
+  width: 325px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(201, 201, 201);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-2 .card-2-desc,
+  body .prueba .interiors .card-2 .card-2-desc {
+    width: 330px;
+  }
+}
+html .prueba .interiors .card-2 .card-2-desc h3,
+body .prueba .interiors .card-2 .card-2-desc h3 {
+  font-family: pepe;
+  color: rgb(43, 42, 42);
+}
+html .prueba .interiors .card-2 .card-2-desc p,
+body .prueba .interiors .card-2 .card-2-desc p {
+  width: 90%;
+  color: rgb(32, 32, 32);
+  font-family: pepe;
+}
+html .prueba .interiors .card-2 .card-2-desc a,
+body .prueba .interiors .card-2 .card-2-desc a {
+  text-decoration: none;
+  color: black;
+}
+html .prueba .interiors .card-2 .card-2-desc button,
+body .prueba .interiors .card-2 .card-2-desc button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  border: 1px solid rgb(165, 165, 165);
+  gap: 4px;
+  transition: 0.1s;
+  color: black;
+}
+html .prueba .interiors .card-2 .card-2-desc button img,
+body .prueba .interiors .card-2 .card-2-desc button img {
+  width: 25px;
+}
+html .prueba .interiors .card-2 .card-2-desc button:hover,
+body .prueba .interiors .card-2 .card-2-desc button:hover {
+  color: #dbbe7f;
+  border: 1px solid #dbbe7f;
+}
+html .prueba .interiors .card-2 .card-2-desc button:hover img,
+body .prueba .interiors .card-2 .card-2-desc button:hover img {
+  src: url(/assets/folder1.png);
+}
+html .prueba .interiors .card-3,
+body .prueba .interiors .card-3 {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-3,
+  body .prueba .interiors .card-3 {
+    flex-direction: column-reverse;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+html .prueba .interiors .card-3 .card-3-img-1,
+body .prueba .interiors .card-3 .card-3-img-1 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets/INTERIORS/DIMMdarwin/darwin1.webp);
+}
+html .prueba .interiors .card-3 .card-3-img-2,
+body .prueba .interiors .card-3 .card-3-img-2 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets//INTERIORS/DIMMdarwin/darwin2.webp);
+}
+html .prueba .interiors .card-3 .card-3-desc,
+body .prueba .interiors .card-3 .card-3-desc {
+  width: 325px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(201, 201, 201);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-3 .card-3-desc,
+  body .prueba .interiors .card-3 .card-3-desc {
+    width: 330px;
+  }
+}
+html .prueba .interiors .card-3 .card-3-desc h3,
+body .prueba .interiors .card-3 .card-3-desc h3 {
+  font-family: pepe;
+  color: rgb(43, 42, 42);
+}
+html .prueba .interiors .card-3 .card-3-desc p,
+body .prueba .interiors .card-3 .card-3-desc p {
+  width: 90%;
+  color: rgb(32, 32, 32);
+  font-family: pepe;
+}
+html .prueba .interiors .card-3 .card-3-desc a,
+body .prueba .interiors .card-3 .card-3-desc a {
+  text-decoration: none;
+  color: black;
+}
+html .prueba .interiors .card-3 .card-3-desc button,
+body .prueba .interiors .card-3 .card-3-desc button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  border: 1px solid rgb(165, 165, 165);
+  gap: 4px;
+  transition: 0.1s;
+  color: black;
+}
+html .prueba .interiors .card-3 .card-3-desc button img,
+body .prueba .interiors .card-3 .card-3-desc button img {
+  width: 25px;
+}
+html .prueba .interiors .card-3 .card-3-desc button:hover,
+body .prueba .interiors .card-3 .card-3-desc button:hover {
+  color: #dbbe7f;
+  border: 1px solid #dbbe7f;
+}
+html .prueba .interiors .card-3 .card-3-desc button:hover img,
+body .prueba .interiors .card-3 .card-3-desc button:hover img {
+  src: url(/assets/folder1.png);
+}
+html .prueba .interiors .card-4,
+body .prueba .interiors .card-4 {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-4,
+  body .prueba .interiors .card-4 {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+html .prueba .interiors .card-4 .card-4-img-1,
+body .prueba .interiors .card-4 .card-4-img-1 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets/INTERIORS/DIMMgorriti/gorriti1.webp);
+}
+html .prueba .interiors .card-4 .card-4-img-2,
+body .prueba .interiors .card-4 .card-4-img-2 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets//INTERIORS/DIMMgorriti/gorriti2.webp);
+}
+html .prueba .interiors .card-4 .card-4-desc,
+body .prueba .interiors .card-4 .card-4-desc {
+  width: 325px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(201, 201, 201);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-4 .card-4-desc,
+  body .prueba .interiors .card-4 .card-4-desc {
+    width: 330px;
+  }
+}
+html .prueba .interiors .card-4 .card-4-desc h3,
+body .prueba .interiors .card-4 .card-4-desc h3 {
+  font-family: pepe;
+  color: rgb(43, 42, 42);
+}
+html .prueba .interiors .card-4 .card-4-desc p,
+body .prueba .interiors .card-4 .card-4-desc p {
+  width: 90%;
+  color: rgb(32, 32, 32);
+  font-family: pepe;
+}
+html .prueba .interiors .card-4 .card-4-desc a,
+body .prueba .interiors .card-4 .card-4-desc a {
+  text-decoration: none;
+  color: black;
+}
+html .prueba .interiors .card-4 .card-4-desc button,
+body .prueba .interiors .card-4 .card-4-desc button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  border: 1px solid rgb(165, 165, 165);
+  gap: 4px;
+  transition: 0.1s;
+  color: black;
+}
+html .prueba .interiors .card-4 .card-4-desc button img,
+body .prueba .interiors .card-4 .card-4-desc button img {
+  width: 25px;
+}
+html .prueba .interiors .card-4 .card-4-desc button:hover,
+body .prueba .interiors .card-4 .card-4-desc button:hover {
+  color: #dbbe7f;
+  border: 1px solid #dbbe7f;
+}
+html .prueba .interiors .card-4 .card-4-desc button:hover img,
+body .prueba .interiors .card-4 .card-4-desc button:hover img {
+  src: url(/assets/folder1.png);
+}
+html .prueba .interiors .card-5,
+body .prueba .interiors .card-5 {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-5,
+  body .prueba .interiors .card-5 {
+    flex-direction: column-reverse;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+html .prueba .interiors .card-5 .card-5-img-1,
+body .prueba .interiors .card-5 .card-5-img-1 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets/INTERIORS/FE/fe1.webp);
+}
+html .prueba .interiors .card-5 .card-5-img-2,
+body .prueba .interiors .card-5 .card-5-img-2 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets//INTERIORS/FE/fe2.webp);
+}
+html .prueba .interiors .card-5 .card-5-desc,
+body .prueba .interiors .card-5 .card-5-desc {
+  width: 325px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(201, 201, 201);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-5 .card-5-desc,
+  body .prueba .interiors .card-5 .card-5-desc {
+    width: 330px;
+  }
+}
+html .prueba .interiors .card-5 .card-5-desc h3,
+body .prueba .interiors .card-5 .card-5-desc h3 {
+  font-family: pepe;
+  color: rgb(43, 42, 42);
+}
+html .prueba .interiors .card-5 .card-5-desc p,
+body .prueba .interiors .card-5 .card-5-desc p {
+  width: 90%;
+  color: rgb(32, 32, 32);
+  font-family: pepe;
+}
+html .prueba .interiors .card-5 .card-5-desc a,
+body .prueba .interiors .card-5 .card-5-desc a {
+  text-decoration: none;
+  color: black;
+}
+html .prueba .interiors .card-5 .card-5-desc button,
+body .prueba .interiors .card-5 .card-5-desc button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  border: 1px solid rgb(165, 165, 165);
+  gap: 4px;
+  transition: 0.1s;
+  color: black;
+}
+html .prueba .interiors .card-5 .card-5-desc button img,
+body .prueba .interiors .card-5 .card-5-desc button img {
+  width: 25px;
+}
+html .prueba .interiors .card-5 .card-5-desc button:hover,
+body .prueba .interiors .card-5 .card-5-desc button:hover {
+  color: #dbbe7f;
+  border: 1px solid #dbbe7f;
+}
+html .prueba .interiors .card-5 .card-5-desc button:hover img,
+body .prueba .interiors .card-5 .card-5-desc button:hover img {
+  src: url(/assets/folder1.png);
+}
+html .prueba .interiors .card-6,
+body .prueba .interiors .card-6 {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-6,
+  body .prueba .interiors .card-6 {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+  }
+}
+html .prueba .interiors .card-6 .card-6-img-1,
+body .prueba .interiors .card-6 .card-6-img-1 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets/INTERIORS/LACROZEterraza/terra1.webp);
+}
+html .prueba .interiors .card-6 .card-6-img-2,
+body .prueba .interiors .card-6 .card-6-img-2 {
+  width: 325px;
+  height: 280px;
+  background-image: url(/assets//INTERIORS/LACROZEterraza/terra2.webp);
+}
+html .prueba .interiors .card-6 .card-6-desc,
+body .prueba .interiors .card-6 .card-6-desc {
+  width: 325px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(201, 201, 201);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .interiors .card-6 .card-6-desc,
+  body .prueba .interiors .card-6 .card-6-desc {
+    width: 330px;
+  }
+}
+html .prueba .interiors .card-6 .card-6-desc h3,
+body .prueba .interiors .card-6 .card-6-desc h3 {
+  font-family: pepe;
+  color: rgb(43, 42, 42);
+}
+html .prueba .interiors .card-6 .card-6-desc p,
+body .prueba .interiors .card-6 .card-6-desc p {
+  width: 90%;
+  color: rgb(32, 32, 32);
+  font-family: pepe;
+}
+html .prueba .interiors .card-6 .card-6-desc a,
+body .prueba .interiors .card-6 .card-6-desc a {
+  text-decoration: none;
+  color: black;
+}
+html .prueba .interiors .card-6 .card-6-desc button,
+body .prueba .interiors .card-6 .card-6-desc button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  border: 1px solid rgb(165, 165, 165);
+  gap: 4px;
+  transition: 0.1s;
+  color: black;
+}
+html .prueba .interiors .card-6 .card-6-desc button img,
+body .prueba .interiors .card-6 .card-6-desc button img {
+  width: 25px;
+}
+html .prueba .interiors .card-6 .card-6-desc button:hover,
+body .prueba .interiors .card-6 .card-6-desc button:hover {
+  color: #dbbe7f;
+  border: 1px solid #dbbe7f;
+}
+html .prueba .interiors .card-6 .card-6-desc button:hover img,
+body .prueba .interiors .card-6 .card-6-desc button:hover img {
+  src: url(/assets/folder1.png);
+}
+html .prueba .set-desing,
+body .prueba .set-desing {
+  width: 1000px;
+  height: auto;
+  margin: 30px auto;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .set-desing,
+  body .prueba .set-desing {
+    width: 95%;
+  }
+}
+html .prueba .set-desing h2,
+body .prueba .set-desing h2 {
+  font-family: pepe;
+  text-align: center;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+html .prueba .set-desing .set-1,
+body .prueba .set-desing .set-1 {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 3s ease;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .set-desing .set-1,
+  body .prueba .set-desing .set-1 {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+}
+html .prueba .set-desing .set-1 .set-1-img-1,
+body .prueba .set-desing .set-1 .set-1-img-1 {
+  width: 250px;
+  height: 280px;
+  background-color: white;
+  border: 1px solid black;
+}
+@media screen and (max-width: 430px) {
+  html .prueba .set-desing .set-1 .set-1-img-1,
+  body .prueba .set-desing .set-1 .set-1-img-1 {
+    width: 320px;
+    height: 270px;
+  }
+}
+html .prueba .set-desing .set-1 .set-1-img-2,
+body .prueba .set-desing .set-1 .set-1-img-2 {
+  width: 250px;
+  height: 280px;
+  background-color: white;
+  border: 1px solid black;
+}
+@media screen and (max-width: 430px) {
+  html .prueba .set-desing .set-1 .set-1-img-2,
+  body .prueba .set-desing .set-1 .set-1-img-2 {
+    width: 320px;
+    height: 270px;
+  }
+}
+html .prueba .set-desing .set-1 .set-1-carrousel,
+body .prueba .set-desing .set-1 .set-1-carrousel {
+  width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(201, 201, 201);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .set-desing .set-1 .set-1-carrousel,
+  body .prueba .set-desing .set-1 .set-1-carrousel {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 430px) {
+  html .prueba .set-desing .set-1 .set-1-carrousel,
+  body .prueba .set-desing .set-1 .set-1-carrousel {
+    width: 320px;
+    height: 270px;
+  }
+}
+html .prueba .set-desing .set-1 .set-1-carrousel h3,
+body .prueba .set-desing .set-1 .set-1-carrousel h3 {
+  font-family: pepe;
+  color: rgb(43, 42, 42);
+}
+html .prueba .set-desing .set-1 .set-1-carrousel p,
+body .prueba .set-desing .set-1 .set-1-carrousel p {
+  width: 90%;
+  color: rgb(32, 32, 32);
+  font-family: pepe;
+}
+html .prueba .set-desing .set-1 .set-1-carrousel .slide img,
+body .prueba .set-desing .set-1 .set-1-carrousel .slide img {
+  width: 400px;
+  height: 350px;
+}
+@media screen and (max-width: 430px) {
+  html .prueba .set-desing .set-1 .set-1-carrousel .slide img,
+  body .prueba .set-desing .set-1 .set-1-carrousel .slide img {
+    width: 320px;
+    height: 270px;
+  }
+}
+html .prueba .styling,
+body .prueba .styling {
+  width: 1000px;
+  height: auto;
+  margin: 30px auto;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .styling,
+  body .prueba .styling {
+    width: 95%;
+  }
+}
+html .prueba .styling h2,
+body .prueba .styling h2 {
+  font-family: pepe;
+  text-align: center;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+html .prueba .styling .style-1,
+body .prueba .styling .style-1 {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 3s ease;
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .styling .style-1,
+  body .prueba .styling .style-1 {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+}
+html .prueba .styling .style-1 .style-1-img-1,
+body .prueba .styling .style-1 .style-1-img-1 {
+  width: 250px;
+  height: 280px;
+  background-color: white;
+  border: 1px solid black;
+}
+@media screen and (max-width: 430px) {
+  html .prueba .styling .style-1 .style-1-img-1,
+  body .prueba .styling .style-1 .style-1-img-1 {
+    width: 320px;
+    height: 270px;
+  }
+}
+html .prueba .styling .style-1 .style-1-img-2,
+body .prueba .styling .style-1 .style-1-img-2 {
+  width: 250px;
+  height: 280px;
+  background-color: white;
+  border: 1px solid black;
+}
+@media screen and (max-width: 430px) {
+  html .prueba .styling .style-1 .style-1-img-2,
+  body .prueba .styling .style-1 .style-1-img-2 {
+    width: 320px;
+    height: 270px;
+  }
+}
+html .prueba .styling .style-1 .style-1-carrousel,
+body .prueba .styling .style-1 .style-1-carrousel {
+  width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(201, 201, 201);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .styling .style-1 .style-1-carrousel,
+  body .prueba .styling .style-1 .style-1-carrousel {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 430px) {
+  html .prueba .styling .style-1 .style-1-carrousel,
+  body .prueba .styling .style-1 .style-1-carrousel {
+    width: 320px;
+    height: 270px;
+  }
+}
+html .prueba .styling .style-1 .style-1-carrousel h3,
+body .prueba .styling .style-1 .style-1-carrousel h3 {
+  font-family: pepe;
+  color: rgb(43, 42, 42);
+}
+html .prueba .styling .style-1 .style-1-carrousel p,
+body .prueba .styling .style-1 .style-1-carrousel p {
+  width: 90%;
+  color: rgb(32, 32, 32);
+  font-family: pepe;
+}
+html .prueba .styling .style-1 .style-1-carrousel .slide img,
+body .prueba .styling .style-1 .style-1-carrousel .slide img {
+  width: 400px;
+  height: 350px;
+}
+@media screen and (max-width: 430px) {
+  html .prueba .styling .style-1 .style-1-carrousel .slide img,
+  body .prueba .styling .style-1 .style-1-carrousel .slide img {
+    width: 320px;
+    height: 270px;
+  }
+}
+html .prueba .contact,
+body .prueba .contact {
+  width: 1000px;
+  height: 280px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 1050px) {
+  html .prueba .contact,
+  body .prueba .contact {
+    width: 95%;
+  }
+}
+html .prueba .contact h2,
+body .prueba .contact h2 {
+  font-family: pepe;
+  text-align: center;
+  padding-top: 30px;
+  letter-spacing: 2px;
+}
+html .prueba .contact .contact-icons,
+body .prueba .contact .contact-icons {
+  width: 250px;
+  height: 70px;
+  margin: 50px auto;
+  border: 1px solid rgb(7, 7, 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: rgb(255, 255, 255);
+}
+html .prueba .contact .contact-icons svg,
+body .prueba .contact .contact-icons svg {
+  width: 50px;
+  transition: 0.3s;
+}
+html .prueba .contact .contact-icons svg:hover,
+body .prueba .contact .contact-icons svg:hover {
+  width: 55px;
+  cursor: pointer;
+}
+html .prueba .contact p,
+body .prueba .contact p {
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */

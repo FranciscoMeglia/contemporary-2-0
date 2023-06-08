@@ -1,0 +1,20 @@
+.loader {
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    margin: 42vh auto;
+}
+
+.loader h2 {
+    font-family: pepe;
+    font-size: 35px;
+}
+
+.scroll-reveal {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
